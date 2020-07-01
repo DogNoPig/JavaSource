@@ -140,11 +140,13 @@ import sun.security.util.SecurityConstants;
 public
 class Thread implements Runnable {
     /* Make sure registerNatives is the first thing <clinit> does. */
+    // native 修饰的方法代表这个方法需要调用当前系统环境下的非Java编写的外部类库 一般没有方法体
     private static native void registerNatives();
     static {
         registerNatives();
     }
 
+    // volatile 保证 name 线程安全 当修改时立即让其他线程可见 禁止进行指令重排序
     private volatile String name;
     private int            priority;
     private Thread         threadQ;
@@ -243,6 +245,7 @@ class Thread implements Runnable {
 
     /**
      * The minimum priority that a thread can have.
+     * 线程可以具有的最低优先级。
      */
     public final static int MIN_PRIORITY = 1;
 
@@ -311,7 +314,7 @@ class Thread implements Runnable {
      *         the length of time to sleep in milliseconds
      *
      * @param  nanos
-     *         {@code 0-999999} additional nanoseconds to sleep
+     *         {@code 0-999999} additional nanoseconds to sleep 额外的纳秒睡眠
      *
      * @throws  IllegalArgumentException
      *          if the value of {@code millis} is negative, or the value of
@@ -994,6 +997,7 @@ class Thread implements Runnable {
     }
 
     /**
+     * 暂停
      * Tests if this thread is alive. A thread is alive if it has
      * been started and has not yet died.
      *

@@ -54,13 +54,13 @@ public final class Integer extends Number implements Comparable<Integer> {
      * A constant holding the minimum value an {@code int} can
      * have, -2<sup>31</sup>.
      */
-    @Native public static final int   MIN_VALUE = 0x80000000;
+    @Native public static final int   MIN_VALUE = 0x80000000; // -2^31
 
     /**
      * A constant holding the maximum value an {@code int} can
      * have, 2<sup>31</sup>-1.
      */
-    @Native public static final int   MAX_VALUE = 0x7fffffff;
+    @Native public static final int   MAX_VALUE = 0x7fffffff; // 2^31
 
     /**
      * The {@code Class} instance representing the primitive type
@@ -1523,7 +1523,7 @@ public final class Integer extends Number implements Comparable<Integer> {
      * Returns the signum function of the specified {@code int} value.  (The
      * return value is -1 if the specified value is negative; 0 if the
      * specified value is zero; and 1 if the specified value is positive.)
-     *
+     * 判断正负 负数 -1 0 0 正数 1
      * @param i the value whose signum is to be computed
      * @return the signum function of the specified {@code int} value.
      * @since 1.5
@@ -1536,7 +1536,7 @@ public final class Integer extends Number implements Comparable<Integer> {
     /**
      * Returns the value obtained by reversing the order of the bytes in the
      * two's complement representation of the specified {@code int} value.
-     *
+     *返回通过反转指定{@code int}值的二进制补码表示形式的字节顺序而获得的值。
      * @param i the value whose bytes are to be reversed
      * @return the value obtained by reversing the bytes in the specified
      *     {@code int} value.
@@ -1551,7 +1551,7 @@ public final class Integer extends Number implements Comparable<Integer> {
 
     /**
      * Adds two integers together as per the + operator.
-     *
+     * int 类型 加法实现
      * @param a the first operand
      * @param b the second operand
      * @return the sum of {@code a} and {@code b}
@@ -1565,7 +1565,7 @@ public final class Integer extends Number implements Comparable<Integer> {
     /**
      * Returns the greater of two {@code int} values
      * as if by calling {@link Math#max(int, int) Math.max}.
-     *
+     * 取最大值
      * @param a the first operand
      * @param b the second operand
      * @return the greater of {@code a} and {@code b}
@@ -1579,7 +1579,7 @@ public final class Integer extends Number implements Comparable<Integer> {
     /**
      * Returns the smaller of two {@code int} values
      * as if by calling {@link Math#min(int, int) Math.min}.
-     *
+     * 取最小值
      * @param a the first operand
      * @param b the second operand
      * @return the smaller of {@code a} and {@code b}

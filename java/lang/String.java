@@ -1,26 +1,6 @@
 /*
  * Copyright (c) 1994, 2013, Oracle and/or its affiliates. All rights reserved.
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
  */
 
 package java.lang;
@@ -110,7 +90,7 @@ import java.util.regex.PatternSyntaxException;
 
 public final class String
     implements java.io.Serializable, Comparable<String>, CharSequence {
-    /** The value is used for character storage. */
+    /** The value is used for character(字符) storage(存储). */
     private final char value[];
 
     /** Cache the hash code for the string */
@@ -124,15 +104,15 @@ public final class String
      *
      * A String instance is written into an ObjectOutputStream according to
      * <a href="{@docRoot}/../platform/serialization/spec/output.html">
-     * Object Serialization Specification, Section 6.2, "Stream Elements"</a>
+     * Object Serialization Specification(规范), Section 6.2, "Stream Elements"</a>
      */
     private static final ObjectStreamField[] serialPersistentFields =
         new ObjectStreamField[0];
 
     /**
      * Initializes a newly created {@code String} object so that it represents
-     * an empty character sequence.  Note that use of this constructor is
-     * unnecessary since Strings are immutable.
+     * an empty character sequence(序列).  Note(注意) that use of this constructor(构造函数) is
+     * unnecessary(不必要的) since(因为) Strings are immutable(不变的).
      */
     public String() {
         this.value = "".value;
@@ -186,6 +166,7 @@ public final class String
      * @throws  IndexOutOfBoundsException
      *          If the {@code offset} and {@code count} arguments index
      *          characters outside the bounds of the {@code value} array
+     *  将char字符分割 从offset开始切割count位
      */
     public String(char value[], int offset, int count) {
         if (offset < 0) {
@@ -319,6 +300,7 @@ public final class String
      * @see  #String(byte[], java.nio.charset.Charset)
      * @see  #String(byte[])
      */
+    // 不推荐使用
     @Deprecated
     public String(byte ascii[], int hibyte, int offset, int count) {
         checkBounds(ascii, offset, count);
@@ -368,6 +350,7 @@ public final class String
      * @see  #String(byte[])
      */
     @Deprecated
+    // 不推荐使用
     public String(byte ascii[], int hibyte) {
         this(ascii, hibyte, 0, ascii.length);
     }

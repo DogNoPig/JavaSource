@@ -1,26 +1,6 @@
 /*
  * Copyright (c) 1994, 2013, Oracle and/or its affiliates. All rights reserved.
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
  */
 
 package java.lang;
@@ -294,7 +274,7 @@ public final class Boolean implements java.io.Serializable,
     /**
      * Returns the result of applying the logical AND operator to the
      * specified {@code boolean} operands.
-     *
+     * 判断 且
      * @param a the first operand
      * @param b the second operand
      * @return the logical AND of {@code a} and {@code b}
@@ -308,7 +288,7 @@ public final class Boolean implements java.io.Serializable,
     /**
      * Returns the result of applying the logical OR operator to the
      * specified {@code boolean} operands.
-     *
+     * 判断 或
      * @param a the first operand
      * @param b the second operand
      * @return the logical OR of {@code a} and {@code b}

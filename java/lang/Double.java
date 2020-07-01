@@ -117,7 +117,7 @@ public final class Double extends Number implements Comparable<Double> {
 
     /**
      * The number of bits used to represent a {@code double} value.
-     *
+     * 比Integer 32 大一倍 64
      * @since 1.5
      */
     public static final int SIZE = 64;

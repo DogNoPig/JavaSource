@@ -564,7 +564,7 @@ public abstract class AbstractMap<K,V> implements Map<K,V> {
     }
 
     /**
-     * Returns a shallow copy of this <tt>AbstractMap</tt> instance: the keys
+     * Returns a shallow(浅) copy of this <tt>AbstractMap</tt> instance: the keys
      * and values themselves are not cloned.
      *
      * @return a shallow copy of this map

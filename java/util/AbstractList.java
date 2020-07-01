@@ -1,26 +1,6 @@
 /*
  * Copyright (c) 1997, 2012, Oracle and/or its affiliates. All rights reserved.
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
  */
 
 package java.util;
@@ -72,6 +52,7 @@ public abstract class AbstractList<E> extends AbstractCollection<E> implements L
     /**
      * Sole constructor.  (For invocation by subclass constructors, typically
      * implicit.)
+     * 唯一的构造方法
      */
     protected AbstractList() {
     }
@@ -663,6 +644,7 @@ class SubList<E> extends AbstractList<E> {
         return result;
     }
 
+    // 移除范围内的list
     protected void removeRange(int fromIndex, int toIndex) {
         checkForComodification();
         l.removeRange(fromIndex+offset, toIndex+offset);

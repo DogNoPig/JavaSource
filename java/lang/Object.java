@@ -1,34 +1,16 @@
 /*
  * Copyright (c) 1994, 2012, Oracle and/or its affiliates. All rights reserved.
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
  */
 
 package java.lang;
 
 /**
  * Class {@code Object} is the root of the class hierarchy.
+ * 所有对象的根
  * Every class has {@code Object} as a superclass. All objects,
  * including arrays, implement the methods of this class.
+ * 每个对象的超类，所有对象包括数组，实现的方法源于此类
  *
  * @author  unascribed
  * @see     java.lang.Class
