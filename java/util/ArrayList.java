@@ -307,6 +307,7 @@ public class ArrayList<E> extends AbstractList<E>
     /**
      * Returns the index of the first occurrence of the specified element
      * in this list, or -1 if this list does not contain the element.
+     * 返回指定元素在此列表中首次出现的索引；如果此列表不包含该元素，则返回-1。
      * More formally, returns the lowest index <tt>i</tt> such that
      * <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))</tt>,
      * or -1 if there is no such index.
